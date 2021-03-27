@@ -33,14 +33,14 @@ public class EmployeeController {
     }
 
     // Single item
-/*
+
     @GetMapping("/employees/{id}")
     Employee one(@PathVariable Long id) {
-
-        return repository.findById(id)
+        return employeeService.findById(id)
                 .orElseThrow(() -> new EmployeeNotFoundException(id));
     }
 
+    /*
     @PutMapping("/employees/{id}")
     Employee replaceEmployee(@RequestBody Employee newEmployee, @PathVariable Long id) {
 
